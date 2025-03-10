@@ -13,9 +13,10 @@
 
 ### Решение:
 
-sudo apt install ecryptfs-utils
-sudo adduser cryptouser
-ecryptfs-migrate-home -u cryptouser
+1. sudo apt install ecryptfs-utils
+2. sudo adduser cryptouser
+3. ecryptfs-migrate-home -u cryptouser
+
 До шифрования:
 
 ![until crypt](image.png)
