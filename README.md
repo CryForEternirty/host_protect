@@ -45,6 +45,17 @@
 5. sudo cryptsetup luksOpen /mnt/luks-disk.img luks-volume
 6. sudo mkfs.ext4 /dev/mapper/luks-volume
 7. sudo mkdir /mnt/secure
-8. df -h | grep secure
+8. sudo mount /dev/mapper/luks-volume /mnt/secure
+9. df -h | grep secure
 
 ![end](image-3.png)
+
+### Размонтирование:
+
+1. sudo umount /mnt/secure
+2. sudo cryptsetup luksClose luks-volume
+
+### Чтобы подключить заново:
+
+1. sudo cryptsetup luksOpen /mnt/luks-disk.img luks-volume
+2. sudo mount /dev/mapper/luks-volume /mnt/secure
